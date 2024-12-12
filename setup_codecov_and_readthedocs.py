@@ -215,17 +215,17 @@ if __name__ == "__main__":
     if user_input.strip() != "Y":
         raise ValueError("User aborted.")
 
-    path_codecov_token = get_codecov_token_file(
-        service=service,
-        owner_username=codecov_owner_username,
-        token_name=codecov_token_name,
-    )
-    codecov_token = path_codecov_token.read_text().strip()
-    path_github_token = get_github_token_file(
-        owner_username=github_owner_username,
-        token_name=github_token_name,
-    )
-    github_token = path_github_token.read_text().strip()
+    # path_codecov_token = get_codecov_token_file(
+    #     service=service,
+    #     owner_username=codecov_owner_username,
+    #     token_name=codecov_token_name,
+    # )
+    # codecov_token = path_codecov_token.read_text().strip()
+    # path_github_token = get_github_token_file(
+    #     owner_username=github_owner_username,
+    #     token_name=github_token_name,
+    # )
+    # github_token = path_github_token.read_text().strip()
     path_readthedocs_token = get_readthedocs_token_file(
         owner_username=readthedocs_owner_username,
         token_name=readthedocs_token_name,
@@ -235,19 +235,19 @@ if __name__ == "__main__":
     if service != "github":
         raise ValueError("Only support github service.")
 
-    codecov_upload_token = get_codecov_io_upload_token(
-        codecov_token=codecov_token,
-        service=service,
-        github_owner_username=github_owner_username,
-        repo_name=repo_name,
-    )
-
-    setup_codecov_upload_token_on_github(
-        codecov_upload_token=codecov_upload_token,
-        github_token=github_token,
-        github_owner_username=github_owner_username,
-        repo_name=repo_name,
-    )
+    # codecov_upload_token = get_codecov_io_upload_token(
+    #     codecov_token=codecov_token,
+    #     service=service,
+    #     github_owner_username=github_owner_username,
+    #     repo_name=repo_name,
+    # )
+    #
+    # setup_codecov_upload_token_on_github(
+    #     codecov_upload_token=codecov_upload_token,
+    #     github_token=github_token,
+    #     github_owner_username=github_owner_username,
+    #     repo_name=repo_name,
+    # )
 
     setup_readthedocs_project(
         readthedocs_token=readthedocs_token,
