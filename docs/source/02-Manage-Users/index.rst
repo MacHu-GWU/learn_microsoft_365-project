@@ -61,3 +61,35 @@ Guest User
 Reference:
 
 - `about guest users <https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/about-guest-users?view=o365-worldwide>`_
+
+
+Manage Shared Mailboxes
+------------------------------------------------------------------------------
+在企业的使用场景中, 经常需要为公司的社交媒体账号, 市场营销 (Marketing) 或客户支持 (Customer Support) 等设置一个专门的邮箱, 用于接收邮件和注册媒体账号. 
+
+这样做的目的是因为这类媒体账号通常应由公司的管理层拥有, 比如公司的创始人或高层管理者. 如果直接使用创始人的邮箱来创建这些账号, 那么在使用第三方服务登录时, 往往需要接收验证码或激活邮件, 这就意味着需要拥有该邮箱的访问权限. 
+
+然而, 创始人本人不可能处理所有事务, 通常会将这类任务外包给团队中的运营人员. 如果将创始人的邮箱分享给他们, 不仅不安全, 而且创始人本人有可能会离职. 如果使用带有创始人姓名的邮箱, 一旦其离职, 邮箱的所有权转移将会非常麻烦. 
+
+因此, 最好是创建一个公司专用的虚拟邮箱. 例如, 社交媒体用 media@company.com, 市场营销用 marketing@company.com, 信息咨询用 info@company.com, 招聘用 jobs@company.com 等. 通过这种方式, 在系统后台中只需为不同员工分配对应邮箱的使用权限. 无论员工离职与否, 公司都可以轻松地控制谁可以使用这些邮箱账号, 从而大大提高管理的便利性. 
+
+在 Microsoft 365 中, 这项功能是自带的. 只要邮箱的使用量不超过 50GB, 就无需支付许可费用, 也就是相当于免费的功能. 一旦超过这个限制, 该邮箱就需要购买许可, 和普通员工邮箱一样使用. 只是, 这种邮箱的登录凭证可能需要被分享出去. 
+
+不过, 这种做法应尽量避免. 因为如果需要通过账号密码来登录, 就失去了在后台进行权限管理的能力. 你必须共享用户名和密码, 这样就不安全. 因此, 总体而言, 一般不会轻易超过免费使用的限制.
+
+这里还有一个问题. 每个 Shared Mailbox 你依然要起一个名字, 就像给一个真人用的邮箱一样. 我们拿用来注册 Linkedin 等媒体账号的邮箱为例好了. 这个名字是有可能被 Public 所看到的. 如果你起一个比如叫做 Media Shared Mail, 这样外面的人看到就会很奇怪. 所以我推荐使用 "公司名 + 职能" 的格式作为名字. 比如 MyCompany Media Team. 招聘就用 MyCompany Recruiter Team. 客服就是 MyCompany Support Team. 这样外面的人看到就不会觉得奇怪了.
+
+创建好 Shared Mailbox 之后, 你就要进入到 Member 的界面选择谁可以使用 (读或写) 这个邮箱.
+
+设置好了 shared mail 之后, 你就可以在 Folder 中添加这个 shared mail (只要你设置了权限). 然后就可以看到收到的邮件了.
+
+.. image:: receive-email-using-shared-mail.png
+
+如果你要用这个邮箱发邮件, 你需要点击 New Email 之后, 打开 Option, 打开 Show From 选项, 然后在 From 里选择用这个 Shared Mailbox 发送既可.
+
+.. image:: send-email-using-shared-mail.png
+
+
+Reference:
+
+- `about shared mailboxes <https://learn.microsoft.com/en-us/microsoft-365/admin/email/about-shared-mailboxes?view=o365-worldwide>`_
